@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Solution {
-    public int[] solution(int []arr) {
+    public Queue<Integer> solution(int []arr) {
         
         Queue<Integer> queue = new LinkedList<>();
 
@@ -11,14 +11,7 @@ public class Solution {
                 queue.add(arr[i]);
             }
         }
-        int queueSize = queue.size();
-        int[] answer = new int[queue.size()];
-
-        for(int j=0; j< queueSize; j++) {
-            answer[j]= queue.peek();
-            queue.poll();
-        }
         
-        return answer;
+        return queue;
     }
 }
